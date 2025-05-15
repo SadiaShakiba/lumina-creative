@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --conatiner-sm: 900px;
+  --container-lg: 1400px;
+  --container-md: 1100px;
+  --bg-primary: #fcf5e9;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  margin: 20px auto;
+}
+
+.header .container {
+  margin: 0 auto;
+  max-width: var(--conatiner-sm);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header .container .logo {
+  max-width: 150px;
+}
+
+.header .container .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.header .container .main-menu a {
+  padding: 10px 20px;
+
+  &:hover {
+    background: var(--bg-primary);
+  }
+}
+
+.header .container .current {
+  background: var(--bg-primary);
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: var(--conatiner-sm);
+  height: 500px;
+}
+
+.hero p {
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.hero span {
+  background: var(--bg-primary);
+  color: #373737;
+  padding: 0 5px;
+}
+
+.gallery {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--container-lg);
+}
+
+.gallery .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  width: calc(33.333% - 20px);
+  border-radius: 10px;
+
+  &:hover {
+    filter: opacity(90%);
+  }
+}
+
+.gallery-item img {
+  border-radius: 10px;
+}
+
+footer {
+  margin: 10px auto;
+  max-width: var(--conatiner-md);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  line-height: 1.8;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+footer .logo {
+  width: 150px;
+}
+
+footer h4 {
+  margin-bottom: 5px;
+}
+
+footer i {
+  padding: 5px;
+}
+
+.services {
+  margin: 0 auto;
+  background: #333;
+  color: #fff;
+  padding: 30px;
+}
+
+.services h2,
+.team h2,
+.contact-form h2 {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 24px;
+}
+
+.services .card {
+  display: flex;
+  margin: 30px auto;
+  max-width: var(--container-lg);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.team .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 55px;
+  gap: 30px;
+}
+
+.services .card-1,
+.services .card-2,
+.services .card-3 {
+  max-width: 350px;
+}
+
+.services h3 {
+  margin-bottom: 10px;
+}
+
+.team {
+  margin: 20px auto;
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.team img {
+  border-radius: 10px;
+}
+
+.bg-dark {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+}
+
+.contact-form {
+  margin: 20px auto;
+  padding-bottom: 65px;
+  max-width: var(--conatiner-sm);
+}
+
+.contact-form p {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-form .form {
+  margin: 20px 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border-style: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.form-group input {
+  margin: 15px auto;
+  padding-bottom: 15px;
+}
+
+.form-group textarea {
+  margin: 32px auto;
+  padding-bottom: 120px;
+  resize: none;
+}
+
+.form-group .btn {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+
+  &:hover {
+    background-color: var(--bg-primary);
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    text-align: center;
+    height: 300px;
+    padding: 1rem;
+  }
+
+  .hero p {
+    font-size: 28px;
+  }
+
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer .contact {
+    margin-bottom: 5px;
+  }
+
+  .services .card,
+  .team .card {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .services .card-1,
+  .services .card-2,
+  .services .card-3 {
+    max-width: 100%;
+  }
+}
